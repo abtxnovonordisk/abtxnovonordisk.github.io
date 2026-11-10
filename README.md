@@ -57,6 +57,10 @@ For the photo, use a cut-out PNG or WEBP with a transparent background, about 60
 
 Every save is kept. Open **Commits** (the clock icon on the main page), find the last version that worked, and open it to copy the old text back.
 
+## Visitor stats
+
+Visits are counted by GoatCounter (free). Open **https://abtx.goatcounter.com** to see visitors, pages, countries and devices. Clicks on the resume download, WhatsApp and LinkedIn buttons show up as `resume-download`, `whatsapp-click` and `linkedin-click`. The counter is the `gc.zgo.at/count.js` line at the end of `index.html`; don't delete it.
+
 ## Ongoing costs
 
 - **GitHub hosting:** free.
