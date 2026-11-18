@@ -8,7 +8,7 @@ This repository is your website. Anything you change here goes live on **https:/
 |---|---|
 | `index.html` | The whole website: all text, sections and layout |
 | `Abhishek_Tomar_Resume.pdf` | The full 2-page resume behind the main "Download" buttons |
-| `Abhishek_Tomar_Resume_1_Page.pdf` | The 1-page resume behind the "Resume · 1 page" button |
+| `Abhishek_Tomar_Resume_1_Page.pdf` | A 1-page resume to share by link when applying (no button on the site) |
 | `me.webp` | Your photo in the hero |
 | `showreel.mp4` and `showreel-poster.jpg` | The showreel video and its cover image |
 | `og-image.jpg` | The preview image shown when the link is shared on WhatsApp or LinkedIn |
@@ -60,7 +60,7 @@ Every save is kept. Open **Commits** (the clock icon on the main page), find the
 
 ## Visitor stats
 
-Visits are counted by GoatCounter (free). Open **https://abtx.goatcounter.com** to see visitors, pages, countries and devices. Clicks on the resume download, WhatsApp and LinkedIn buttons show up as `resume-download`, `resume-1page-download`, `whatsapp-click` and `linkedin-click`. The counter is the `gc.zgo.at/count.js` line at the end of `index.html`; don't delete it.
+Visits are counted by GoatCounter (free). Open **https://abtx.goatcounter.com** to see visitors, pages, countries and devices. Clicks on the resume download, WhatsApp and LinkedIn buttons show up as `resume-download`, `whatsapp-click` and `linkedin-click`. The counter is the `gc.zgo.at/count.js` line at the end of `index.html`; don't delete it.
 
 ## Ongoing costs
 
