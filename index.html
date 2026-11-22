@@ -358,7 +358,7 @@ footer{border-top:1px solid var(--rule); padding-block:22px 28px; display:flex; 
 .portrait,.hi,.st{z-index:1}
 /* hero name: letters lift on hover */
 .big .ch{display:inline-block; transition:transform .45s cubic-bezier(.3,1.6,.5,1), color .3s}
-.big .ch:hover{transform:translateY(-10%) rotate(-4deg); color:var(--violet)}
+@media (hover:hover){ .big .ch:hover{transform:translateY(-10%) rotate(-4deg); color:var(--violet)} }
 /* shiny badge text */
 .badge{position:relative; overflow:hidden}
 .badge::after{content:""; position:absolute; inset:0; background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.9) 50%,transparent 65%); transform:translateX(-120%); animation:shine 4.5s ease-in-out 3s infinite}
@@ -375,14 +375,14 @@ footer{border-top:1px solid var(--rule); padding-block:22px 28px; display:flex; 
 .node,.bcard,.step{isolation:isolate}
 .bcard{position:relative}
 .spot::before{content:""; position:absolute; inset:-1px; border-radius:inherit; padding:2px; background:radial-gradient(240px circle at var(--mx,50%) var(--my,50%),var(--violet),rgba(123,79,214,.25) 40%,transparent 70%); -webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0); -webkit-mask-composite:xor; mask-composite:exclude; opacity:0; transition:opacity .35s; pointer-events:none; z-index:2}
-.spot:hover::before{opacity:1}
+@media (hover:hover){ .spot:hover::before{opacity:1} }
 .spot .glow{position:absolute; inset:0; border-radius:inherit; background:radial-gradient(320px circle at var(--mx,50%) var(--my,50%),rgba(142,154,254,.12),transparent 60%); opacity:0; transition:opacity .35s; pointer-events:none; z-index:-1}
-.spot:hover .glow{opacity:1}
+@media (hover:hover){ .spot:hover .glow{opacity:1} }
 /* 3D tilt */
 .folders{perspective:1200px}
 .folder .body,.feature{transform-style:preserve-3d; transition:transform .5s cubic-bezier(.2,.8,.1,1)}
 .folder .body::after,.feature::after{content:""; position:absolute; inset:0; border-radius:inherit; background:radial-gradient(400px circle at var(--mx,50%) var(--my,50%),rgba(255,255,255,.22),transparent 55%); opacity:0; transition:opacity .35s; pointer-events:none}
-.folder:hover .body::after,.feature:hover::after{opacity:1}
+@media (hover:hover){ .folder:hover .body::after,.feature:hover::after{opacity:1} }
 /* reel grows as it scrolls in */
 .player{transition:border-radius .3s}
 /* toolkit bubbles push away from cursor */
@@ -396,13 +396,16 @@ html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto !important}
 .lenis.lenis-stopped{overflow:hidden}
 /* power cards stack as you scroll (desktop) */
+.power{position:relative}
+.power h3{padding-right:64px}
+.power .pk{position:absolute; top:22px; right:24px; font:800 .78rem var(--f-display); letter-spacing:.08em; opacity:.65}
 @media (min-width:961px){
-  .powers{grid-template-columns:1fr; gap:22px; padding-bottom:96px}
-  .power{position:sticky; top:calc(120px + var(--k,0)*26px); min-height:300px; grid-template-columns:1.1fr .9fr; align-items:end; padding:44px 48px; box-shadow:0 -14px 40px rgba(28,27,25,.10); transform-origin:center top}
-  .power h3{font-size:clamp(2.6rem,4.6vw,4.2rem)}
-  .power p{font-size:1.1rem; max-width:36ch; justify-self:end}
+  .powers{grid-template-columns:1fr; gap:24px; padding-bottom:96px}
+  .power{position:sticky; top:calc(112px + var(--k,0)*86px); min-height:280px; grid-template-columns:1.1fr .9fr; align-items:start; align-content:start; padding:24px 48px 44px; box-shadow:0 -10px 30px rgba(28,27,25,.10); transform-origin:center top}
+  .power h3{font-size:clamp(2.4rem,4.2vw,3.8rem); line-height:1}
+  .power p{font-size:1.1rem; max-width:36ch; justify-self:end; align-self:end; margin-top:100px}
   .power:hover{transform:none}
-  .power .pk{position:absolute; top:40px; right:48px; font:800 .9rem var(--f-display); letter-spacing:.08em; opacity:.6}
+  .power .pk{top:30px; right:48px; font-size:.9rem}
 }
 /* award ring glow */
 .ring circle{filter:drop-shadow(0 0 0 rgba(205,170,85,0)); animation:gglow 3.2s ease-in-out infinite}
@@ -892,7 +895,7 @@ html.lenis,html.lenis body{height:auto}
   var mq = document.querySelector('.marquee'), lastY = scrollY, skew = 0;
   (function loop(){
     var dy = scrollY - lastY; lastY = scrollY;
-    skew += (Math.max(-8, Math.min(8, dy*.35)) - skew)*.12;
+    skew += (Math.max(-3, Math.min(3, dy*.12)) - skew)*.12;
     if (mq) mq.style.transform = 'rotate(-1.5deg) skewX(' + (-skew).toFixed(2) + 'deg)';
     if (player) {
       var r = player.getBoundingClientRect(), p = 1 - Math.max(0, Math.min(1, (r.top - innerHeight*.15) / (innerHeight*.7)));
