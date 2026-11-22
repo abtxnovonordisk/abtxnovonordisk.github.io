@@ -11,7 +11,9 @@
 <meta property="og:url" content="https://abtx.in/">
 <meta property="og:title" content="Abhishek Tomar · Omnichannel Engagement Manager">
 <meta property="og:description" content="Pharma omnichannel engagement, launches, AI-led content and UX. I turn brand plans into campaigns doctors open, read and act on.">
-<meta property="og:image" content="https://abtx.in/og-image.jpg">
+<meta property="og:image" content="https://abtx.in/og-dark.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2308080B'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='34' text-anchor='middle' fill='%23D9EA6E'%3EA%3C/text%3E%3C/svg%3E">
 <title>Abhishek Tomar · Omnichannel Engagement Manager | Pharma, AI and UX</title>
@@ -107,8 +109,11 @@ em.s{font-family:var(--f-s); font-style:italic; font-weight:400; letter-spacing:
 .port .ringline{position:absolute; left:50%; top:46%; width:78%; aspect-ratio:1; translate:-50% -50%; border-radius:50%; border:1px solid rgba(255,255,255,.12)}
 .port .ringline::after{content:""; position:absolute; inset:-1px; border-radius:50%; background:conic-gradient(from 0deg,transparent 0 70%,var(--lime) 85%,transparent 100%); -webkit-mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px)); mask:radial-gradient(farthest-side,transparent calc(100% - 2px),#000 calc(100% - 1px)); animation:spin 6s linear infinite}
 @keyframes spin{to{transform:rotate(360deg)}}
-.port img{position:absolute; left:50%; bottom:0; translate:-50% 0; height:100%; width:auto; max-width:none; filter:drop-shadow(0 30px 40px rgba(0,0,0,.6)) drop-shadow(0 0 1px rgba(217,234,110,.35))}
-.port img{-webkit-mask-image:linear-gradient(#000 78%,transparent 99%); mask-image:linear-gradient(#000 78%,transparent 99%)}
+.pimg{position:absolute; inset:0; filter:drop-shadow(0 30px 40px rgba(0,0,0,.6)) drop-shadow(0 0 1px rgba(217,234,110,.35))}
+.port img{position:absolute; left:50%; bottom:0; translate:-50% 0; height:100%; width:auto; max-width:none}
+.seat{position:absolute; left:2%; right:2%; top:59%; bottom:2.5%; border-radius:20px; background:linear-gradient(180deg,rgba(255,255,255,.10),rgba(255,255,255,.025) 40%,rgba(255,255,255,.01)); border:1px solid rgba(255,255,255,.12); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); box-shadow:inset 0 1px 0 rgba(217,234,110,.55),0 -1px 24px -6px rgba(217,234,110,.35),0 40px 60px -20px rgba(0,0,0,.7)}
+.seat::before{content:""; position:absolute; left:10%; right:10%; top:-1px; height:2px; border-radius:2px; background:linear-gradient(90deg,transparent,var(--lime),transparent); opacity:.9}
+.seat::after{content:""; position:absolute; left:6%; right:6%; bottom:-22px; height:28px; background:radial-gradient(ellipse at center,rgba(0,0,0,.6),transparent 70%)}
 .float{position:absolute; z-index:3; display:flex; align-items:center; gap:10px; padding:10px 14px; border-radius:16px; background:rgba(18,18,24,.7); border:1px solid var(--line2); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); font-size:.82rem; line-height:1.25; box-shadow:0 20px 40px -10px rgba(0,0,0,.6); animation:bob 6s ease-in-out infinite}
 .float b{display:block; font:800 1.15rem var(--f-d); letter-spacing:-.02em}
 .float .ic{width:34px; height:34px; border-radius:10px; display:grid; place-items:center; flex:none; font-size:1rem}
@@ -236,6 +241,33 @@ em.s{font-family:var(--f-s); font-style:italic; font-weight:400; letter-spacing:
 .proj h3{font-size:1.4rem; margin-top:10px; letter-spacing:-.02em}
 .proj p{color:var(--mu); font-size:.94rem; margin-top:8px}
 .proj .orb{position:absolute; right:-60px; top:-60px; width:200px; height:200px; border-radius:50%; background:var(--c); opacity:.14; filter:blur(50px); z-index:-1}
+
+.proj,.feature{cursor:pointer}
+.feature .more{display:inline-flex; margin-left:10px; font:600 .78rem var(--f-b); color:var(--mu); vertical-align:middle}
+@media (hover:hover){ .feature:hover .more{color:var(--lime)} }
+.proj .hint{font-size:.78rem; color:var(--mu2); margin-top:10px; display:block}
+/* case study dialog */
+dialog.case{width:min(760px,calc(100% - 28px)); max-height:min(86vh,900px); padding:0; border:1px solid var(--line2); border-radius:28px; background:#101016; color:var(--tx); box-shadow:0 40px 120px -20px rgba(0,0,0,.8),0 0 0 1px rgba(255,255,255,.04); overflow:hidden}
+dialog.case[open]{animation:pop .5s cubic-bezier(.2,.9,.2,1.05)}
+dialog.case::backdrop{background:rgba(5,5,8,.72); backdrop-filter:blur(8px); -webkit-backdrop-filter:blur(8px)}
+@keyframes pop{from{opacity:0; transform:translateY(30px) scale(.96)}}
+.case-in{max-height:min(86vh,900px); overflow-y:auto; overscroll-behavior:contain}
+.case-hd{position:relative; padding:34px 34px 30px; background:radial-gradient(90% 140% at 0% 0%,color-mix(in srgb,var(--c) 30%,transparent),transparent 60%); border-bottom:1px solid var(--line)}
+.case-hd small{font:600 .7rem var(--f-b); letter-spacing:.14em; text-transform:uppercase; color:var(--c)}
+.case-hd h3{font-size:clamp(2rem,5vw,3rem); margin-top:12px}
+.case-hd .big{display:block; margin-top:18px; font:800 clamp(3rem,8vw,4.6rem) var(--f-d); letter-spacing:-.05em; line-height:.9; color:var(--c)}
+.case-hd .bl{color:var(--mu); margin-top:6px}
+.case-x{position:absolute; top:18px; right:18px; width:44px; height:44px; border-radius:50%; border:1px solid var(--line2); background:rgba(255,255,255,.05); color:var(--tx); font-size:1.2rem; cursor:pointer}
+.case-x:hover{background:rgba(255,255,255,.12)}
+.case-bd{padding:28px 34px 34px; display:grid; gap:24px}
+.case-bd h4{font:600 .72rem var(--f-b); letter-spacing:.14em; text-transform:uppercase; color:var(--mu2); margin-bottom:8px}
+.case-bd p,.case-bd li{color:#C9C7CF; font-size:1rem}
+.case-bd ul{margin:0; padding-left:18px; display:grid; gap:6px}
+.case-bd li::marker{color:var(--c)}
+.case-nav{display:flex; justify-content:space-between; gap:10px; padding:0 34px 30px}
+.case-nav button{height:44px; padding:0 18px; border-radius:999px; border:1px solid var(--line2); background:transparent; color:var(--tx); font:600 .88rem var(--f-b); cursor:pointer}
+.case-nav button:hover{border-color:var(--c)}
+@media (max-width:760px){ .case-hd{padding:28px 22px 24px} .case-bd{padding:22px} .case-nav{padding:0 22px 24px} dialog.case{border-radius:22px} }
 
 /* awards */
 .awards{display:grid; grid-template-columns:.9fr 1.1fr; gap:clamp(30px,5vw,70px); align-items:center}
@@ -391,7 +423,7 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
       </div>
       <div class="port fade" style="--dl:.6s" id="port">
         <span class="halo" aria-hidden="true"></span><span class="ringline" aria-hidden="true"></span>
-        <img src="me.webp" alt="Abhishek Tomar in a black suit and striped tie, sitting and smiling" width="559" height="1028">
+        <span class="seat" aria-hidden="true"></span><span class="pimg"><img src="me.webp" alt="Abhishek Tomar in a black suit and striped tie, sitting and smiling" width="559" height="1028"></span>
         <div class="float f1" data-depth="22"><span class="ic" style="background:rgba(226,190,98,.18);color:var(--gold)">★</span><span><b>Gold</b>PMi Awards 2026</span></div>
         <div class="float f2" data-depth="-18"><span class="ic" style="background:rgba(217,234,110,.16);color:var(--lime)">◎</span><span><b>30,000+</b>doctors on the portal</span></div>
         <div class="float f3" data-depth="14"><span class="ic" style="background:rgba(139,108,255,.2);color:var(--violet)">✦</span><span><b>3.5x</b>content with AI</span></div>
@@ -486,9 +518,9 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
         <h2 class="split">A record breaker, <em class="s grad">then six more.</em></h2>
         <p class="rv">Projects from Novo Nordisk India, from platforms used by tens of thousands of doctors to AI that changed how we make content.</p>
       </div>
-      <article class="glow-card feature rv" id="feature">
+      <article data-case="fib" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card feature rv" id="feature">
         <div>
-          <span class="tag">★ Record breaker · Interactive tool</span>
+          <span class="tag">★ Record breaker · Interactive tool</span><span class="more">Read the case study ↗</span>
           <h3>FIB-4 Calculator</h3>
           <p>A web calculator that lets doctors check a patient's FIB-4 liver score in seconds. It broke every engagement record we had, with the <strong>highest click rate Novo Nordisk India has ever recorded</strong>.</p>
         </div>
@@ -501,12 +533,12 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
         </div>
       </article>
       <div class="projects">
-        <article class="glow-card proj wide rv" style="--c:var(--sky)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Platform</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num" data-count="30000" data-suf="+">30,000+</span><h3>India HCP Portal</h3><p>End-to-end UI/UX strategy for the portal doctors use to learn and engage. HCPs onboarded.</p></div></article>
-        <article class="glow-card proj wide rv" style="--c:var(--teal)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Conversational UX</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num" data-count="26000" data-suf="+">26,000+</span><h3>NIAA and NovoPulse</h3><p>WhatsApp flows for doctors, plus the NovoPulse channel for 500+ pharmacies.</p></div></article>
-        <article class="glow-card proj rv" style="--c:var(--gold)"><span class="orb" aria-hidden="true"></span><div class="top"><small>E-learning</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num">Gold</span><h3>WE Learn Obesity</h3><p>UI/UX for an online education series of 12+ modules. PMi Awards 2026.</p></div></article>
-        <article class="glow-card proj rv" style="--c:var(--coral)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Campaign</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num" data-count="16.4" data-dec="1" data-suf="M">16.4M</span><h3>Weight of Diabetes</h3><p>Impressions, a view rate 35.4% above benchmark and Slice of Life videos with 3M views.</p></div></article>
-        <article class="glow-card proj rv" style="--c:var(--pink)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Content at scale</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num" data-count="500">500</span><h3>Portal Plus</h3><p>Led India's Portal Plus pages, a global benchmark. Built 240+ myself.</p></div></article>
-        <article class="glow-card proj full rv" style="--c:var(--violet)"><span class="orb" aria-hidden="true"></span><div class="top"><small>AI workflow</small><span class="arrow" aria-hidden="true">→</span></div><div><span class="num" data-count="3.5" data-dec="1" data-suf="x">3.5x</span><h3>AI content engine</h3><p>AI design workflow, AI-voiced brand films, auto-tagging and referencing. Output now 1,000+ assets a year.</p></div></article>
+        <article data-case="hcp" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj wide rv" style="--c:var(--sky)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Platform</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num" data-count="30000" data-suf="+">30,000+</span><h3>India HCP Portal</h3><p>End-to-end UI/UX strategy for the portal doctors use to learn and engage. HCPs onboarded.</p></div></article>
+        <article data-case="niaa" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj wide rv" style="--c:var(--teal)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Conversational UX</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num" data-count="26000" data-suf="+">26,000+</span><h3>NIAA and NovoPulse</h3><p>WhatsApp flows for doctors, plus the NovoPulse channel for 500+ pharmacies.</p></div></article>
+        <article data-case="welearn" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj rv" style="--c:var(--gold)"><span class="orb" aria-hidden="true"></span><div class="top"><small>E-learning</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num">Gold</span><h3>WE Learn Obesity</h3><p>UI/UX for an online education series of 12+ modules. PMi Awards 2026.</p></div></article>
+        <article data-case="wod" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj rv" style="--c:var(--coral)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Campaign</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num" data-count="16.4" data-dec="1" data-suf="M">16.4M</span><h3>Weight of Diabetes</h3><p>Impressions, a view rate 35.4% above benchmark and Slice of Life videos with 3M views.</p></div></article>
+        <article data-case="portal" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj rv" style="--c:var(--pink)"><span class="orb" aria-hidden="true"></span><div class="top"><small>Content at scale</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num" data-count="500">500</span><h3>Portal Plus</h3><p>Led India's Portal Plus pages, a global benchmark. Built 240+ myself.</p></div></article>
+        <article data-case="ai" tabindex="0" role="button" aria-haspopup="dialog" class="glow-card proj full rv" style="--c:var(--violet)"><span class="orb" aria-hidden="true"></span><div class="top"><small>AI workflow</small><span class="arrow" aria-hidden="true">↗</span></div><div><span class="num" data-count="3.5" data-dec="1" data-suf="x">3.5x</span><h3>AI content engine</h3><p>AI design workflow, AI-voiced brand films, auto-tagging and referencing. Output now 1,000+ assets a year.</p></div></article>
       </div>
     </div>
   </section>
@@ -602,6 +634,14 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
   </section>
 </main>
 
+<dialog class="case" id="caseDlg" aria-labelledby="caseTitle">
+  <div class="case-in">
+    <div class="case-hd"><button class="case-x" type="button" id="caseX" aria-label="Close case study">✕</button><small id="caseKind"></small><h3 id="caseTitle"></h3><span class="big" id="caseBig"></span><p class="bl" id="caseBl"></p></div>
+    <div class="case-bd" id="caseBody"></div>
+    <div class="case-nav"><button type="button" id="casePrev">← Previous</button><button type="button" id="caseNext">Next →</button></div>
+  </div>
+</dialog>
+
 <script src="lenis.min.js"></script>
 <script>
 (function(){
@@ -659,7 +699,10 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
     if (hasIO) new IntersectionObserver(function(es){ vis = es[0].isIntersecting; if (vis) loop(); }).observe(canvas);
     var running = false;
     function frame(now){ mx += (tx-mx)*.05; my += (ty-my)*.05; gl.uniform1f(uT, (now - t0)/1000); gl.uniform2f(uM, mx, my); gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4); }
-    function loop(){ if (running) return; running = true; (function f(now){ if (!vis || reduced) { running = false; return; } frame(now); requestAnimationFrame(f); })(performance.now()); }
+    var slow = !!(navigator.connection && navigator.connection.saveData) || (navigator.deviceMemory && navigator.deviceMemory <= 2), last = 0, n = 0, sum = 0;
+    function loop(){ if (running || slow) return; running = true; (function f(now){ if (!vis || reduced || slow) { running = false; return; }
+      if (last) { var dt = now - last; if (n < 120) { n++; sum += dt; if (n === 120 && sum/n > 34) { slow = true; } } } last = now;
+      frame(now); requestAnimationFrame(f); })(performance.now()); }
     frame(performance.now()+ 8000); if (!reduced) loop();
   }
   $$('canvas[data-shader]').forEach(shader);
@@ -761,6 +804,63 @@ footer{position:relative; z-index:2; margin-top:120px; padding-top:26px; border-
     if (!reduced && hasIO) new IntersectionObserver(function(es){ es.forEach(function(e){ if (started) { if (!e.isIntersecting) rv.pause(); return; } if (e.isIntersecting) { rv.muted = true; rv.loop = true; var pr = rv.play(); if (pr && pr.catch) pr.catch(function(){}); } else rv.pause(); }); }, {threshold:.4}).observe(player);
     pb.addEventListener('click', function(){ started = true; rv.loop = false; rv.muted = false; rv.currentTime = 0; rv.controls = true; var pr = rv.play(); if (pr && pr.catch) pr.catch(function(){ rv.muted = true; rv.play(); }); player.classList.add('playing'); });
     rv.addEventListener('ended', function(){ player.classList.remove('playing'); rv.controls = false; pb.querySelector('.pb-tx').textContent = 'Watch again'; started = false; });
+  }
+
+  /* ---------- case studies ---------- */
+  var CASES = {
+    fib:{c:'var(--lime)', kind:'Interactive tool', title:'FIB-4 Calculator', big:'Record', bl:'Highest click rate Novo Nordisk India has ever recorded',
+      what:'A web calculator that lets doctors check a patient\'s FIB-4 liver score in seconds.',
+      role:['Built the FIB-4 calculator website for doctors'],
+      result:['Broke every engagement record we had','The highest click rate Novo Nordisk India has ever recorded']},
+    hcp:{c:'var(--sky)', kind:'Platform · UI/UX', title:'India HCP Portal', big:'30,000+', bl:'HCPs onboarded',
+      what:'The India HCP Portal: the platform doctors use to learn and engage.',
+      role:['Led the UI/UX end to end: user journeys, screens and the doctor onboarding flow'],
+      result:['30,000+ HCPs onboarded on the portal']},
+    niaa:{c:'var(--teal)', kind:'Conversational UX', title:'NIAA and NovoPulse', big:'26,000+', bl:'HCPs, plus 500+ pharmacies',
+      what:'NIAA is the WhatsApp chatbot that reaches doctors with videos, GIFs, banners and carousels. NovoPulse brings the same channel to pharmacies.',
+      role:['Designed the conversation flows for the NIAA WhatsApp chatbot','Designed conversational UX for the NovoPulse pharmacy channel','Built NIAA as an AR avatar in a holobox for events'],
+      result:['26,000+ HCPs on NIAA','500+ pharmacy outlets on NovoPulse']},
+    welearn:{c:'var(--gold)', kind:'E-learning · Award winner', title:'WE Learn Obesity', big:'Gold', bl:'PMi Awards 2026, PM Society, London',
+      what:'An online education series for doctors on obesity, with 12+ modules.',
+      role:['One of the three-person core team, with brand and medical colleagues','Designed the UI/UX of the learning experience across the modules'],
+      result:['Gold in HCP Education, Training and Support at the PMi Awards 2026']},
+    wod:{c:'var(--coral)', kind:'Campaign', title:'Weight of Diabetes', big:'16.4M', bl:'Impressions',
+      what:'The Weight of Diabetes campaign: assets and films, plus the Slice of Life video series.',
+      role:['Created assets and films for the campaign'],
+      result:['16.4M impressions','A video view rate 35.4% above benchmark','Slice of Life videos reached 3M views']},
+    portal:{c:'var(--pink)', kind:'Content at scale', title:'Portal Plus', big:'500', bl:'Pages for India',
+      what:'India\'s Portal Plus pages, recognised as a global benchmark.',
+      role:['Led the Portal Plus pages for India','Built 240+ of the pages myself'],
+      result:['500 pages live for India','Recognised as a global benchmark']},
+    ai:{c:'var(--violet)', kind:'AI workflow', title:'AI content engine', big:'3.5x', bl:'Content output, now 1,000+ assets a year',
+      what:'An AI-assisted design and content workflow for the brand and Digital Sales teams.',
+      role:['Set up the AI-assisted workflow for design and content','Made HCP brand videos with motion graphics and AI voiceover, plus an AI-presenter intro video for the Digital Sales team','Added auto-tagging and medical referencing','Localised 5,000+ global Wegovy launch assets against 28+ criteria for India'],
+      result:['3.5x content output','1,000+ assets a year']}
+  };
+  var order = ['fib','hcp','niaa','welearn','wod','portal','ai'], dlg = document.getElementById('caseDlg'), curCase = 0, opener = null;
+  function li(a){ return '<ul>' + a.map(function(x){ return '<li>'+x+'</li>'; }).join('') + '</ul>'; }
+  function showCase(i){
+    curCase = (i + order.length) % order.length; var k = CASES[order[curCase]];
+    dlg.style.setProperty('--c', k.c);
+    document.getElementById('caseKind').textContent = k.kind; document.getElementById('caseTitle').textContent = k.title;
+    document.getElementById('caseBig').textContent = k.big; document.getElementById('caseBl').textContent = k.bl;
+    document.getElementById('caseBody').innerHTML = '<div><h4>What it is</h4><p>'+k.what+'</p></div><div><h4>My role</h4>'+li(k.role)+'</div><div><h4>Outcome</h4>'+li(k.result)+'</div>';
+    dlg.querySelector('.case-in').scrollTop = 0;
+  }
+  function openCase(key, el){
+    if (!dlg || !dlg.showModal) return; opener = el; showCase(order.indexOf(key));
+    if (!dlg.open) dlg.showModal(); if (lenis) lenis.stop(); if (window.goatcounter && goatcounter.count) goatcounter.count({path:'case-'+key, title:CASES[key].title, event:true});
+  }
+  if (dlg) {
+    $$('[data-case]').forEach(function(c){
+      c.addEventListener('click', function(){ openCase(c.dataset.case, c); });
+      c.addEventListener('keydown', function(e){ if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openCase(c.dataset.case, c); } });
+    });
+    document.getElementById('caseX').addEventListener('click', function(){ dlg.close(); });
+    document.getElementById('casePrev').addEventListener('click', function(){ showCase(curCase - 1); });
+    document.getElementById('caseNext').addEventListener('click', function(){ showCase(curCase + 1); });
+    dlg.addEventListener('click', function(e){ if (e.target === dlg) dlg.close(); });
+    dlg.addEventListener('close', function(){ if (lenis) lenis.start(); if (opener) opener.focus({preventScroll:true}); });
   }
 
   /* ---------- menu ---------- */
