@@ -68,7 +68,8 @@ a{color:inherit}
 .chips{display:grid; grid-template-columns:repeat(3,1fr); gap:6px}
 .hero-grid{display:grid; grid-template-columns:1.1fr .9fr; gap:40px; align-items:end; margin-top:40px}
 .hero-grid > *{min-width:0}
-.big{font-size:clamp(3.6rem,10.5vw,9.6rem); line-height:.86; font-weight:800; letter-spacing:-.045em; color:var(--sage)}
+.hero-grid > div:first-child{container-type:inline-size}
+.big{font-size:clamp(3.6rem,10.5vw,9.6rem); font-size:clamp(3.2rem,min(10.5vw,21cqi),9.6rem); line-height:.86; font-weight:800; letter-spacing:-.045em; color:var(--sage)}
 .big .w{display:block; overflow:hidden; padding-bottom:.05em}
 .big .w > span{display:inline-block; animation:rise 1s cubic-bezier(.2,.8,.1,1) 1.25s both}
 .big .w:nth-child(2) > span{animation-delay:1.35s; color:var(--ink)}
